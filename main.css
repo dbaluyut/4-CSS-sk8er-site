@@ -1,8 +1,24 @@
-section {
-  width: 80%;
+.gray-text {
+  color: lightgrey;
 }
 
-body {
+h3 {
+  margin: 0;
+}
+
+p {
+  font-size: 12px;
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+  width: 50%;
+}
+
+#test {
   display: flex;
   justify-content: center;
 }
@@ -15,11 +31,22 @@ body {
 
 .nav-box {
   height: 2rem;
-  border: 2px solid red;
+  background-color: #a11723;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 80%;
+}
+
+.nav-box:visited,
+.navbox:link,
+a {
+  color: white;
+}
+
+* a {
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .top {
@@ -27,7 +54,15 @@ body {
   grid-template-columns: 1fr;
 }
 
-.container {
+.top a {
+  margin-right: 4rem;
+}
+.top i {
+  font-size: 30px;
+  margin-left: 10px;
+}
+
+.container-right {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -36,17 +71,19 @@ body {
 }
 
 .sm-logo {
-  width: 40px;
-  height: 40px;
-  border: 2px solid red;
+  font-size: 50px;
   margin-left: 5px;
 }
 
 .hero-banner {
   grid-column-start: 1;
   grid-column-end: 5;
-  height: 10rem;
-  border: 2px solid red;
+  height: 12rem;
+  border: 3px solid white;
+  overflow: hidden;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
 }
 
 main {
@@ -57,37 +94,221 @@ main {
 }
 
 .card {
-  border: 2px solid red;
-  height: 10rem;
+  border: 3px solid white;
+  background: white;
+  height: 16rem;
+  padding: 20px;
 }
 
-.profile-1x1 {
-  border: 2px solid red;
-  height: 5rem;
-  font-weight: bold;
-}
-
-.profile-1x2 {
-  border: 2px solid red;
-  height: 10rem;
-  font-weight: bold;
-}
-
-.profile-2x1 {
-  border: 2px solid red;
+.card a {
+  color: #a11723;
+  text-justify: center;
 }
 
 .profile-grid {
   display: grid;
+  grid-gap: 10px;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  border: 2px solid red;
-  grid-gap: 0.5rem;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.profile-1 {
+  border: 5px solid white;
+  grid-column: 1;
+  grid-row: 1;
+  height: 12rem;
+  background-image: url(assets/sk8er-4.png);
+  background-position: 76% 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.profile-2 {
+  border: 5px solid white;
+  grid-column: 2;
+  grid-row: 1;
+  height: 12rem;
+  background-image: url(assets/sk8er-3.png);
+  background-position: 0%% 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+.profile-3 {
+  border: 5px solid white;
+  grid-column: 3;
+  grid-row: 1 / 3;
+  background-image: url(assets/sk8er-2.png);
+  background-position: 68% 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+.profile-4 {
+  border: 5px solid white;
+  grid-column: 1 / 3;
+  grid-row: 2;
+  height: 12rem;
+  background-image: url(assets/sk8er-1.png);
+  background-position: 2% 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.floating-box {
+  background-color: #a11723;
+  width: 10rem;
+  height: 3rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 15%;
+  bottom: 1040px;
+  font-size: 80%;
+  font-weight: bold;
+  color: white;
+}
+
+.floating-box::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 1.5rem 0 1.5rem 1.5rem;
+  border-color: transparent transparent transparent #a11722;
+  position: relative;
+  left: 34px;
+}
+
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("assets/bg.jpg");
+  height: auto;
+  position: static;
+  background-size: ;
+}
+
+.hero-banner #top-image-2 {
+  height: 12rem;
+  background-image: url("assets/peralta-logo.png");
+  background-size: 50%;
+  background-position-x: 1rem;
+  background-position-y: 0.75rem;
+  background-repeat: no-repeat;
+  background-size: 300px;
+}
+
+#top-image-1 {
+  width: 100%;
+  height: 12rem;
+  background-image: url("assets/top-image.png");
+  background-size: 100%;
+  background-position-x: 10%;
+  background-position-y: 10%;
+}
+
+#top-image-3 {
+  width: 100%;
+  height: 12rem;
+  background-image: url("assets/grid.png");
+  background-size: 150%;
+  background-position-x: 10%;
+  background-position-y: 10%;
+  opacity: 70%;
 }
 
 .end-banner {
   grid-column-start: 1;
   grid-column-end: 4;
-  height: 10rem;
+  height: auto;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 20px;
+}
+
+.end-banner img {
+  height: 12rem;
+}
+
+.contact-us {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  height: auto;
+  background: white;
+  margin-bottom: 6rem;
+  padding: 20px;
+}
+
+h2 {
+  margin: 0;
+}
+
+.container-left {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+#form {
+  width: 50%;
+}
+
+.sm-logo-2 {
+  width: 20px;
+  height: 20px;
   border: 2px solid red;
+  margin-left: 5px;
+}
+
+form textarea,
+form input {
+  border-style: none;
+  border: 2px solid lightgrey;
+  width: 28rem;
+  margin: 0.5rem;
+  padding: 5px;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: lightgrey;
+}
+
+form button {
+  background: #a11723;
+  outline-style: none;
+  border: none;
+  color: white;
+  padding: 0.5rem 4rem;
+  position: relative;
+  left: 18rem;
+}
+
+.container-jr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
